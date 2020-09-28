@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NONAME</title>
+</head>
+
+<body>
+    <script>
+        alert("preencha as notas");
+        var n1, n2, n3, M; 
+        n1 = prompt("nota 1");
+        n2 = prompt("nota 2");
+        n3 = prompt("nota 3");
+
+        var D = confirm("Calcular média");
+        if (D){
+            M = (parseFloat(n1) + parseFloat(n2) + parseFloat(n3)) / 3;
+            alert("Media = " + M);
+        }
+        else{
+            alert("ok");
+        }
+    </script>
+</body>
+    
+</html>
