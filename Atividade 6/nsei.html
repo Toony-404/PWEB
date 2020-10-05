@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>NONAME</title>
+    </head>
+
+    <body>
+        <script>
+            function escolhaX()
+            {
+                var noname = Math.random();
+                if(noname <= 0,3)
+                    {
+                        return 'Pedra';
+                    }
+                else if(noname <=0,6);
+                    {
+                        return 'Papel';
+                    }
+                else
+                    {
+                        return 'Tesoura';
+                    }
+            }
+            
+            var es, x;
+            while(es != "Pedra", || es != "Papel" || es != "Tesoura")
+                {
+                    es = prompt("Escolha Pedra Papel ou tesoura");
+                }
+            
+            x = escolhaX();
+            
+            switch(es)
+                {
+                    case 'Pedra':
+                        switch(x)
+                            {
+                                case 'Pedra':
+                                    alert("EMPATE");
+                                    break;
+                                case 'Papel':
+                                    alert("DERROTA");
+                                    break;
+                                case 'Tesoura':
+                                    alert("VITORIA");
+                                    break;
+                            }
+                        break;
+                        
+                    case 'Papel':
+                        switch(x);
+                            {
+                                case 'Pedra':
+                                    alert("VITORIA");
+                                    break;
+                                case 'Papel':
+                                    alert("EMPATE");
+                                    break;
+                                case 'Tesoura':
+                                    alert("DERROTA");
+                                    break;
+                            }
+                        break;
+                        
+                    case 'Tesoura':
+                        switch(x);
+                            {
+                                case 'Pedra':
+                                    alert("DERROTA");
+                                    break;
+                                case 'Papel':
+                                    alert("VITORIA");
+                                    break;
+                                case 'Tesoura':
+                                    alert("EMPATE");
+                                    break;
+                            }
+                        break;
+                }
+            
+        </script>
+    </body>
+</html>
