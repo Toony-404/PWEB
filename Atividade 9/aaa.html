@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aaaa</title>
+</head>
+<body>
+    <script>
+        function Ret(alt, lar)
+        {
+            this.alt = alt;
+            this.lar = lar;
+
+            this.area = function()
+            {
+                var area = this.alt * this.lar;
+                return area;
+            }
+        }
+        
+        alt = parseFloat(prompt("altura"));
+        lar = parseFloat(prompt("largura"));
+
+        var ret = new Ret(alt,lar);
+        alert(ret.area());
+    </script>
+</body>
+</html>

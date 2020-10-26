@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>titulo</title>
+</head>
+<body>
+    <script>
+        function Conta() { // “superclasse”
+            var nome;
+            var Banco;
+            var Numero;
+
+            this.setNome = function (value) {
+                this.nome = value;
+            };
+            this.getNome = function () {
+                return this.nome;
+            };
+
+            this.setBanco = function (value) {
+                this.Banco = value;
+            };
+            this.getBanco = function () {
+                return this.Banco;
+            };
+
+            this.setNumero = function (value) {
+                this.Numero = value;
+            };
+            this.getNumero = function () {
+                return this.Numero;
+            };
+        }
+
+        function ContaCorrente() { // “subclasse”
+            var Especial;
+
+            this.getEspecial = function () {
+                return this.Especial;
+            };
+            this.setEspecial = function (value) {
+                this.Especial = value;
+            };
+        }
+
+        function ContaPoupanca() { // “subclasse”
+            var Juros;
+            var Vencimento;
+
+            this.getJuros = function () {
+                return this.Juros;
+            };
+            this.setJuros = function (value) {
+                this.Juros = value;
+            };
+
+            this.getVencimento = function () {
+                return this.Vencimento;
+            };
+            this.setVencimento = function (value) {
+                this.Vencimento = value;
+            };
+        }
+
+        ContaCorrente.prototype = new Conta();
+        ContaPoupanca.prototype = new Conta();
+
+        ContaA = new ContaCorrente();
+        ContaA.setNome("umnome");
+        ContaA.setBanco("noname");
+        ContaA.setNumero("11");
+        ContaA.setEspecial("inferno");
+
+        ContaB = new ContaPoupanca();
+        ContaB.setNome("noname");
+        ContaB.setBanco("umnome");
+        ContaB.setNumero("13");
+        ContaB.setJuros("muito");
+        ContaB.setVencimento("faz tempo");
+
+        alert(
+        ContaA.getNome()+ '\n' + 
+        ContaA.getBanco()+ '\n' + 
+        ContaA.getNumero()+ '\n' + 
+        ContaA.getEspecial()+ '\n\n\n' + 
+
+        ContaB.getNome()+ '\n' + 
+        ContaB.getBanco()+ '\n' + 
+        ContaB.getNumero()+ '\n' + 
+        ContaB.getJuros()+ '\n' + 
+        ContaB.getVencimento());
+
+    </script>
+</body>
+</html>
