@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NONAM</title>
+</head>
+<body>
+    <style>
+        .Foto{
+            width: 360px;
+            height: 360px;
+        }
+    </style>
+	<div onmousedown="mDown(this)" onmousemove="mMove(this)" onmouseout="mOut(this)"><img src="close.jpg"></div>
+	<script>
+		function mDown(obj) {
+			obj.innerHTML = '<img src="boom.jpg" class="Foto">';
+		}
+
+		function mMove(obj) {
+            obj.innerHTML = '<img src="open.png" class="Foto">';
+		}
+
+		function mOut(obj) {
+			obj.innerHTML = '<img src="close.jpg" class="Foto">';
+		}
+	</script>
+</body>
+</html>
